@@ -5,7 +5,7 @@ function colorize() {
 
     Array.from(rows).forEach((row, index) => {
         if (index % 2 !== 0) {
-            row.style.backgroundColor = 'red';
+            row.style.backgroundColor = 'teal';
         }
     });
 }

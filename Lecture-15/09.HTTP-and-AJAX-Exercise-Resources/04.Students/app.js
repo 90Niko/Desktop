@@ -6,7 +6,7 @@ function attachEvents() {
 
   const btnSubmit = document.getElementById('submit');
 
-  
+
 
   btnSubmit.addEventListener('click', () => {
 
@@ -33,7 +33,7 @@ function attachEvents() {
     gradeEl.value = "";
 
   });
-  
+
   fetch(baseUrl)
     .then(res => res.json())
     .then(result => {
@@ -41,20 +41,20 @@ function attachEvents() {
       for (const student of allStudents) {
 
 
-       const thFirstName=document.createElement('th');
-       thFirstName.textContent = student.firstName;
-      
-       const thLastName=document.createElement('th');
-       thLastName.textContent = student.lastName;
-       
-        const thfacultNUmberName=document.createElement('th');
+        const thFirstName = document.createElement('th');
+        thFirstName.textContent = student.firstName;
+
+        const thLastName = document.createElement('th');
+        thLastName.textContent = student.lastName;
+
+        const thfacultNUmberName = document.createElement('th');
         thfacultNUmberName.textContent = student.facultyNumber;
-       
-        const thGrade=document.createElement('th');
+
+        const thGrade = document.createElement('th');
         thGrade.textContent = student.grade;
-       
+
         const trEl = document.createElement('tr');
-        trEl.append(thFirstName,thLastName,thfacultNUmberName,thGrade);
+        trEl.append(thFirstName, thLastName, thfacultNUmberName, thGrade);
 
         tableInfo.appendChild(trEl);
       }
